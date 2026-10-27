@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101018">
+  <meta name="description" content="WWE kE — a fan-made wrestling and gaming hub.">
+  <title>WWE kE | Wrestling & Gaming</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">K</span><span>WWE <b>kE</b><small>WRESTLING & GAMING</small></span></div>
+    <span class="fan-tag">FAN HUB</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">YOUR RING. YOUR COMMUNITY.</p>
+      <h1>Welcome to <span>WWE kE</span></h1>
+      <p class="hero-copy">Wrestling news, gaming discoveries, and match-day excitement — all in one place.</p>
+      <a class="primary-btn" href="#games">Explore games <span aria-hidden="true">→</span></a>
+      <div class="ring-art" aria-hidden="true"><div class="ring"><i></i><i></i><i></i><b></b></div><span>LET'S GET READY</span></div>
+    </section>
+
+    <section class="section" id="news">
+      <div class="section-heading"><div><p class="eyebrow">IN THE SPOTLIGHT</p><h2>Wrestling corner</h2></div><span class="live-dot">START HERE</span></div>
+      <div class="feature-card">
+        <div class="feature-icon">🏆</div>
+        <div><h3>Follow the action</h3><p>Use this space for wrestling headlines, match results, and event recaps you write or link to from trusted sources.</p></div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📅</div>
+        <div><h3>Upcoming events</h3><p>Add event dates and times here. Check official sources for the latest schedule.</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="games">
+      <div class="section-heading"><div><p class="eyebrow">PLAYER ONE</p><h2>Gaming zone</h2></div></div>
+      <div class="game-card">
+        <div class="game-emoji">🎮</div>
+        <div class="game-info"><h3>Find a wrestling game</h3><p>Look for Android wrestling games from trusted app stores. Avoid APK sites that ask you to disable phone security.</p><a href="https://play.google.com/store/search?q=wrestling%20games&c=apps" target="_blank" rel="noopener noreferrer">Browse Google Play ↗</a></div>
+      </div>
+      <div class="game-card">
+        <div class="game-emoji">🥊</div>
+        <div class="game-info"><h3>Build your game list</h3><p>Later, add reviews, ratings, device requirements, and links to official downloads.</p><button class="outline-btn" id="saveIdea">Save this idea</button></div>
+      </div>
+      <p class="notice" id="savedMessage" role="status" hidden>Idea saved on this device. Nice one!</p>
+    </section>
+
+    <section class="section fan-section" id="fan-zone">
+      <p class="eyebrow">FAN ZONE</p><h2>Made for wrestling fans</h2>
+      <p>This starter version works as a simple website. A public chat, user accounts, and live scores can be added later with extra setup and moderation.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>WWE kE</strong> · Fan-made project</p>
+    <p class="disclaimer">This is an unofficial fan project and is not affiliated with or endorsed by WWE. Do not use WWE logos or copyrighted media without permission.</p>
+    <p>© <span id="year"></span> WWE kE</p>
+  </footer>
+  <script src="app.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => navigator.serviceWorker.register("./sw.js").catch(() => {}));
+    }
+  </script>
+</body>
+</html>
